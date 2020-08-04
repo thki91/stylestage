@@ -18,12 +18,12 @@
 
 /* global vars */
 :root {
-  --color-primary: #2AB7CA;
+  --color-primary: #267DAB;
   --color-secondary: #312483;
   --color-secondary-faded: rgba(49,36,131, 0.8);
   --color-background: #F4F4F8;
   --color-border: #E6E6EA;
-  --color-btn-hover: #0689A2;
+  --color-btn-hover: #2A5E9D;
   --color-text: #242424;
   --color-paragraph: #575757;
   --color-light: #fff;
@@ -157,7 +157,7 @@ blockquote strong {
   left: 0;
   font-size: 0.9em;
   padding: 0.2em 0.5em;
-  background: linear-gradient(175deg, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(175deg, var(--color-primary) 40%, var(--color-secondary));
 }
 
 blockquote>* {
@@ -324,7 +324,7 @@ nav ul li {
 
 nav ul a::after {
   width: 100%;
-  height: 2px;
+  height: 3px;
   background-color: var(--color-secondary);
   opacity: 0;
   content: "";
@@ -482,6 +482,7 @@ nav ul a:focus::after {
 
 #files {
   background: var(--color-secondary);
+  background-image: linear-gradient(190deg, var(--color-primary) -50%, transparent);
   margin-top: 1em;
 }
 
@@ -602,8 +603,8 @@ nav ul a:focus::after {
 }
 
 .profile .container>a:hover {
-  background: var(--color-secondary-faded);
-  border: 2px solid var(--color-secondary-faded);
+  background: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
   color: var(--color-light);
 }
 
@@ -646,6 +647,7 @@ nav ul a:focus::after {
   position: relative;
   padding: 2.5rem;
   background-color: var(--color-primary);
+  background-image: linear-gradient(4deg, var(--color-secondary) -80%, transparent);
   color: var(--color-light);
   text-align: center;
 }
@@ -763,20 +765,30 @@ nav ul a:focus::after {
 /* icon from https://www.iconfinder.com/ */
 .link-downloadcss,
 .link-downloadhtml {
+  background-color: transparent;
   background-image: url("data:image/svg+xml,%3Csvg width='96' height='96' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Ctitle%3Ebackground%3C/title%3E%3Crect fill='none' id='canvas_background' height='98' width='98' y='-1' x='-1'/%3E%3C/g%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpath fill='%23ffffff' id='svg_1' d='m60,0l-40,0c-6.627,0 -12,5.373 -12,12l0,72c0,6.627 5.373,12 12,12l55.875,0c6.627,0 12.125,-5.373 12.125,-12l0,-56c-4,-4 -22,-22 -28,-28zm0,11.178l16.709,16.822l-16.709,0l0,-16.822zm15.875,76.822l-55.875,0c-2.206,0 -4,-1.794 -4,-4l0,-72c0,-2.206 1.794,-4 4,-4l32,0l0,20l0,8l8,0l20,0l0,48c0,2.168 -1.889,4 -4.125,4z'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: 1em;
   background-position: 0.5em center;
   padding-left: 2em;
+  border-bottom: 1px solid var(--color-light);
 }
 
 /* icon from https://www.iconfinder.com/ */
 .link-codepen {
+  background-color: transparent;
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Ctitle%3Ebackground%3C/title%3E%3Crect fill='none' id='canvas_background' height='402' width='582' y='-1' x='-1'/%3E%3C/g%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpath fill='%23ffffff' id='svg_1' d='m19,6.41l-10.3,10.3a1,1 0 1 1 -1.4,-1.42l10.28,-10.29l-3.58,0a1,1 0 0 1 0,-2l6,0a1,1 0 0 1 1,1l0,6a1,1 0 0 1 -2,0l0,-3.59zm-2,7.59a1,1 0 0 1 2,0l0,5a2,2 0 0 1 -2,2l-12,0a2,2 0 0 1 -2,-2l0,-12c0,-1.1 0.9,-2 2,-2l5,0a1,1 0 0 1 0,2l-5,0l0,12l12,0l0,-5z' class='heroicon-ui'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: 1em;
   background-position: 0.5em center;
   padding-left: 2em;
+  border-bottom: 1px solid var(--color-light);
+}
+
+.link-downloadcss:hover,
+.link-downloadhtml:hover,
+.link-codepen:hover {
+  border-bottom: 1px solid var(--color-secondary-faded);
 }
 
 @keyframes rotate {
